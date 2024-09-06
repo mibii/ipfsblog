@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embracing the Abyss: Reflections on a Dying World</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+	<style>
+    /* Toggle Switch */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+    /* Light theme styles */
+    body.light {
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    body.light article {
+        background-color: #fff;
+        color: #333;
+    }
+
+    body.light .text-gray-100 {
+        color: #333 !important;
+    }
+
+    body.light .text-gray-200 {
+        color: #444 !important;
+    }
+
+    body.light .text-gray-300 {
+        color: #555 !important;
+    }
+
+    body.light .text-gray-400 {
+        color: #666 !important;
+    }
+
+    body.light .bg-gray-700 {
+        background-color: #ddd !important;
+    }
+
+    body.light .bg-gray-800 {
+        background-color: #ccc !important;
+    }
+
+    body.light .border-gray-700 {
+        border-color: #bbb !important;
+    }
+	   /* Ensure the text color in the input field is black */
+    #ipfs-address {
+        color: black;
+    }
+	
+	 #ipfs-gateway {
+        color: black;
+    }
+</style>
+
+</head>
+<body class="bg-gray-900 text-gray-300 font-sans dark">
+    <div class="container mx-auto px-4 py-8 lg:max-w-3xl">
+        <!-- Theme Switcher -->
+        <div class="flex justify-end mb-4">
+            <label class="switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+		
+	   <!-- Input field with datalist for IPFS addresses -->
+    <div class="mb-4">
+        <input list="ipfs-addresses" id="ipfs-address" class="w-full p-2 rounded border border-gray-700" placeholder="Enter or select an IPFS address">
+        <datalist id="ipfs-addresses">
+            <option value="QmVvgaYdXQcKCeX6kf86nnwvvrZU9WJLqf3Wu55WAtESSX">
+            <option value="QmPQMJgTSv2EJ74wLgo1vyBgqNft3CHMKdgiefMnkxENN7">
+			<option value="QmQgUYsJvVCjhgtdjJ9Y4576CecwiL1aEyBhGvkgzuSVmK">
+			<option value=".....">
+            <option value="to see the other post send me a mail -> techmobilebox@gmail.com, i will send other address to fetch"
+            <!-- Add more predefined options as needed -->
+        </datalist>
+		
+		   <!-- Input field with datalist for IPFS gateways -->
+    <div class="mb-4">
+        <input list="ipfs-gateways" id="ipfs-gateway" class="w-full p-2 rounded border border-gray-700" placeholder="Enter or select an IPFS gateway">
+        <datalist id="ipfs-gateways">
+            <option value="https://gateway.pinata.cloud/ipfs/">
+			<option value="http://127.0.0.1:8080/ipfs/">
+            <option value="https://web3.storage/ipfs/">
+			 <option value="https://dweb.link/ipfs/">
+            <option value="https://ipfs.infura.io/ipfs/">
+            <option value="https://ipfs.io/ipfs/">
+			<option value="https://cluster-ipfs.com/ipfs/">
+			<option value="https://ipfs-cluster-gateway.ipfs.io/ipfs/">
+			   <option value="https://ipfs-companion.com/ipfs/">
+			      <option value="https://cf-ipfs.com/ipfs/">
+				     <option value="https://ipfs.fleek.co/ipfs/">
+					  <option value="https://ipns.co/ipfs/">
+					   <option value="https://4everland.io/ipfs/">
+					    <option value="https://crustwebsites.net/ipfs/">
+						
+            <!-- Add more gateways as needed -->  
+        </datalist>
+    </div>
+		
+          <!-- Buttons for fetching and clearing input -->
+    <div class="mb-4">
+        <button id="fetch-post" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded">Fetch Blog Post</button>
+        <button id="clear-inputs" class="mt-2 px-4 py-2 bg-gray-600 text-white rounded">Clear</button>
+    </div>
+		
+		
+        <p id="warning-message" class="text-red-500 mt-2 hidden">Please enter or select an IPFS address.</p>
+        <p id="error-message" class="text-red-500 mt-2 hidden">Unable to fetch data. Please check the IPFS address and try again.</p>
+    </div>
+
+        <article class="bg-gray-800 p-8 rounded-lg shadow-lg">
+		
+            <!-- Blog post content will be inserted here by JavaScript -->
+        </article>
+
+        <section class="mt-12">
+      
+            <!-- Comments will be inserted here by JavaScript -->
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
