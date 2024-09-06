@@ -1,5 +1,6 @@
 Decentralized blog
- Here is for example the post blog that doesn't need any server at all. I place the interface page on netlify, also i place the interface at ipfs https://gateway.pinata.cloud/ipfs/QmPsp3WXwRyNghtkXRg7eFcxNdcCe4pSboYvTydoVZFhK2 but actually it is not required, you may save page locally on your PC and it is will be working fine. (Gitgub link to webpage source)
+ Here is for example the post blog that doesn't need any server at all. I place the interface page on netlify, https://ipfsblog.netlify.app
+ also i place the interface at ipfs https://gateway.pinata.cloud/ipfs/QmPsp3WXwRyNghtkXRg7eFcxNdcCe4pSboYvTydoVZFhK2 but actually it is not required, you may save page locally on your PC and it is will be working fine. (Gitgub link to webpage source)
 
 To get the post just - click on dropdown text list.
 
